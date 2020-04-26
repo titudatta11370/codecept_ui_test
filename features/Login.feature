@@ -1,0 +1,28 @@
+Feature: Login
+
+  Scenario: Invalid login
+    Given I am in login page
+    When I enter wrong login information
+    Then I should get an error message
+
+    Scenario: Valid Login
+      Given I am in login page
+      When I enter valid login info
+      Then I should be directed to homepage
+
+    Scenario: User should be able to create a 3p
+      Given I am in login page
+      When I enter valid login info
+      And I click on "Create Third-Party"
+      And I should be in create third party page
+      And I choose first option from the list of client
+      And I choose "Company Third-Party" option
+      And I fill out the company third party form
+
+
+
+
+
+
+
+

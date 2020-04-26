@@ -1,0 +1,20 @@
+{
+  "name": "Codecept",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "codeceptjs": "^2.6.1",
+    "cucumber": "^6.0.5",
+    "faker": "^4.1.0",
+    "puppeteer": "^3.0.0",
+    "selenium-standalone": "6.17.0"
+  },
+  "dependencies": {}
+}
