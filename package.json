@@ -16,5 +16,7 @@
     "puppeteer": "^3.0.0",
     "selenium-standalone": "6.17.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@codeceptjs/ui": "^0.2.5"
+  }
 }

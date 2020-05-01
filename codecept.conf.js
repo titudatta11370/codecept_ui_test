@@ -3,8 +3,9 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'https://insight.exiger.com/Auth/Login',
-      show: false,
-      windowSize: '1200x1500'
+      show: true,
+      windowSize: '1200x1500',
+      waitforTimeout: 30000
     }
   },
   include: {

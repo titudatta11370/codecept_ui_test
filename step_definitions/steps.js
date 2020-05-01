@@ -17,7 +17,7 @@ Then(/^I should get an error message$/, function () {
     I.see('The username or password you entered is incorrect')
 });
 When(/^I enter valid login info$/, function () {
-    I.fillField('#UserName','tdatta@exiger.com');
+    I.fillField('#UserName','nisha_ann_mathew@yahoo.com');
     I.click('Continue')
     I.see('Password')
     I.fillField('#Password','Admin123$');
@@ -52,5 +52,11 @@ When(/^I fill out the company third party form$/, function () {
     I.click('Submit')
     I.see('Summary')
 
+
+});
+When(/^I search a thirdparty by relationship "([^"]*)"$/, function (status) {
+
+    I.waitForClickable('.ui-widget-content')
+    I.selectOption("Relationship Status", status)
 
 });
