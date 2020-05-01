@@ -3,6 +3,10 @@ const faker = require('faker');
 
 // Add in your custom step files
 
+Before(loginAs => {
+    loginAs('prod'); // login using user session
+});
+
 Given(/^I am in login page$/, function () {
     I.amOnPage('/');
 });
@@ -24,7 +28,7 @@ When(/^I enter valid login info$/, function () {
     I.click('Log In')
 });
 Then(/^I should be directed to homepage$/, function () {
-    I.see('DASHBOARD')
+    I.see('DASHBOARD', '.nav-item')
 });
 
 Then('I click on {string}', (text) => {
@@ -59,4 +63,7 @@ When(/^I search a thirdparty by relationship "([^"]*)"$/, function (status) {
     I.waitForClickable('.ui-widget-content')
     I.selectOption("Relationship Status", status)
 
+});
+Given('I log in to threepm', (loginAs) =>  {
+    loginAs('prod');
 });
