@@ -9,7 +9,7 @@ Feature: Login
     Given I am in login page
     When I enter valid login info
     Then I should be directed to homepage
-#
+
 #  Scenario: Auto login
 #    Given I log in to threepm
 #    Then I should be directed to homepage
@@ -28,12 +28,5 @@ Feature: Login
     When I enter valid login info
     And I click on "Third-Parties"
     And I search a thirdparty by relationship "Accepted"
-
-
-
-
-
-
-
 
 
