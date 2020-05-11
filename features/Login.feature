@@ -30,10 +30,3 @@ Feature: Login
     And I search a thirdparty by relationship "Accepted"
 
 
-
-
-
-
-
-
-
