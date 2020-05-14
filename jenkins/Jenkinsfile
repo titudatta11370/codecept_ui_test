@@ -7,7 +7,7 @@ node {
         cleanWs();
         checkout scm;
         sh 'git reset --hard'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
+        env.PATH = "${dockerHome}"
     }
 
     stage("Building Images") {
