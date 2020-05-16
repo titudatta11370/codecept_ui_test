@@ -92,3 +92,4 @@ pipeline {
                    message: "*ABORTED:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.RUN_DISPLAY_URL}")
         }        
   }
+}
