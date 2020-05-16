@@ -4,13 +4,9 @@ pipeline {
 
     stages {                
 
-        stage('Print ENV') { steps { sh 'printenv' } }
+        stage('Test') { steps { catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') { sh 'npx codeceptjs run' } } }
         
-        stage('Build') { steps { script { docker.build('$IMAGE_NAME:$BRANCH_NAME') } } }
-
-        stage('Selenoid') { steps { catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') { sh 'npx codeceptjs run' } } }
-        
-        stage('Test') {
+        stage('Test2') {
           steps {
             catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 sh 'docker run -t -e QA_ENV=$QA_ENV -e QA_OVERRIDE_ENV_PROMPT=true --link $SELENOID --name $CONTAINER_NAME-$BRANCH_NAME $IMAGE_NAME:$BRANCH_NAME $TAGS'
