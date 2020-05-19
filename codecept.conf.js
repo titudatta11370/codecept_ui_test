@@ -2,6 +2,9 @@ exports.config = {
     output: './output',
     helpers: {
         Puppeteer: {
+            "chrome":{
+                "args": ["--no-sandbox"]
+            },
             url: 'https://insight.exiger.com/Auth/Login',
             show: true,
             windowSize: '1280x1024',
