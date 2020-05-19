@@ -14,4 +14,4 @@ steps:
     image: 'node:12'
     title: "Integration tests"
     commands:
-      - 'npm codeceptjs run'
+      - 'npm run'
