@@ -1,7 +1,7 @@
 node {
 
     def imageTag = "peterngtr/rest-demo:${env.BUILD_NUMBER}"
-    def dockerHome = tool 'myDocker'
+    def dockerHome = tool 'docker'
 
     stage("Initializing") {
         cleanWs();
