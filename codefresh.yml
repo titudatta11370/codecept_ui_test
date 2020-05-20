@@ -9,7 +9,7 @@ steps:
     image: 'node:12'
     title: "Installing dependencies"
     commands:
-      - 'npm install'
+      - 'npm ci'
   my_tests:
     image: 'node:12'
     title: "Integration tests"
