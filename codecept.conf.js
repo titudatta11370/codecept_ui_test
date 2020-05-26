@@ -49,6 +49,8 @@ exports.config = {
         allure: {
             enabled: true,
             outputDir: './output/allure/allure-results', // notice the path used here pointing to allure-results
+            screenshotOnFail: true,
+            retryFailedStep: true
         },
     },
     tests: './*_test.js',
