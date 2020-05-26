@@ -4,7 +4,7 @@ exports.config = {
     output: './output',
     helpers: {
         Puppeteer: {
-            "chrome":{
+            "chrome": {
                 "args": ["--no-sandbox"]
             },
             url: 'https://insight.exiger.com/Auth/Login',
@@ -19,7 +19,7 @@ exports.config = {
 
     },
 
-    cucumber:{
+    cucumber: {
         cucumberOptions: {
             jsonFile: './report/cucumber_report.json',
 
@@ -46,7 +46,9 @@ exports.config = {
         retryFailedStep: {
             enabled: true
         },
-        "allure": {
+        allure: {
+            enabled: true,
+            outputDir: './output/allure/allure-results', // notice the path used here pointing to allure-results
         },
     },
     tests: './*_test.js',
