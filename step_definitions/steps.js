@@ -20,7 +20,7 @@ When(/^I enter valid login info$/, function () {
     I.fillField('#UserName','nisha_ann_mathew@yahoo.com');
     I.click('Continue')
     I.see('Password')
-    I.fillField('#Password','Admin123$');
+    I.fillField('#Password','Admin123!');
     I.click('Log In')
 });
 Then(/^I should be directed to homepage$/, function () {
