@@ -9,7 +9,8 @@ exports.config = {
             },
             url: 'https://insight.exiger.com/Auth/Login',
             show: true,
-            windowSize: '1280x1024',
+            windowSize: '1280x1824',
+            waitForNavigation: "networkidle0",
             waitforTimeout: 30000
         }
     },
@@ -52,6 +53,11 @@ exports.config = {
             screenshotOnFail: true,
             retryFailedStep: true
         },
+    },
+    "mocha": {
+        "reporterOptions": {
+            "reportDir": "output"
+        }
     },
     tests: './*_test.js',
     name: 'Codecept'

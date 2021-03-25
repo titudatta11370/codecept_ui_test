@@ -20,3 +20,12 @@ To run a single test with tag
 
 ```
 npx codeceptjs run --grep @tag
+```
+To run with a mochaawesome reporter
+```
+codeceptjs run --reporter mochawesome
+
+```
+To run with allure report
+````
+npx codeceptjs run --plugins allure
